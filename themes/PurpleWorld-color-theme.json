@@ -1,0 +1,145 @@
+{
+  "name": "Violet Harmony",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1C1C1C",            // Fond de l'éditeur
+    "editor.foreground": "#D4D4D4",            // Texte principal
+    "titleBar.inactiveBackground": "#5E2A84",
+    "editorCursor.foreground": "#B39DDB",      // Couleur du curseur
+    "editor.lineHighlightBackground": "#311B92", // Ligne en surbrillance
+    "editor.selectionBackground": "#5E35B1",   // Sélection de texte
+    "editor.findMatchBackground": "#7E57C2",   // Correspondance de recherche
+    "editor.findMatchHighlightBackground": "rgba(244, 143, 177, 0.5)", // Surlignage des correspondances
+    "activityBar.background": "#5E35B1",       // Barre d'activité
+    "sideBar.background": "#4B0082",    // Violet foncé pour l'arrière-plan de la sidebar
+    "sideBar.foreground": "#FFFFFF",    // Couleur du texte dans la sidebar (blanc pour un bon contraste)
+    "sideBar.border": "#6A0DAD",        // Optionnel : une bordure légèrement plus claire pour la sidebar
+    "sideBarSectionHeader.background": "#5E2A84",  // Optionnel : une nuance plus claire pour les headers
+    "sideBarSectionHeader.foreground": "#FFFFFF",
+    "statusBar.background": "#7E57C2",         // Barre de statut
+    "terminal.background": "#1C1C1C",          // Fond du terminal
+    "terminal.foreground": "#D4D4D4",          // Texte du terminal
+    "button.background": "#7E57C2",            // Boutons
+    "badge.background": "#80DEEA",             // Badge d'alerte
+    "titleBar.activeForeground": "#D4D4D4"     // Texte de la barre de titre
+  },
+  "tokenColors": [
+    {
+      "scope": "comment",
+      "settings": {
+        "foreground": "#B39DDB",                // Couleur des commentaires
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "string",
+      "settings": {
+        "foreground": "#F48FB1"                 // Couleur des chaînes de caractères
+      }
+    },
+    {
+      "scope": "keyword",
+      "settings": {
+        "foreground": "#7E57C2",                // Couleur des mots-clés
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "variable",
+      "settings": {
+        "foreground": "#3CB371"                 // Couleur des variables
+      }
+    },
+    {
+      "scope": "function",
+      "settings": {
+        "foreground": "#7E57C2"                 // Couleur des fonctions
+      }
+    },
+    {
+      "scope": "number",
+      "settings": {
+        "foreground": "#F48FB1"                 // Couleur des nombres
+      }
+    },
+    {
+      "scope": "type",
+      "settings": {
+        "foreground": "#D4D4D4"                 // Couleur des types
+      }
+    },
+    {
+      "scope": "variable.language.this",
+      "settings": {
+        "foreground": "#FF5733",  // Couleur que tu veux pour 'this' (ici un orange vif)
+        "fontStyle": "bold"       // Style optionnel, par exemple gras
+      }
+    },
+    {
+      "scope": [
+        "support.class",
+        "support.type",
+        "entity.name.type"        // Types comme 'Map', 'Set', etc.
+      ],
+      "settings": {
+        "foreground": "#9A7DFF",  // Couleur pour les types (ici un vert vif)
+        "fontStyle": "italic"     // Style optionnel (italique)
+      }
+    },
+    {
+      "scope": "entity.name.function",  // Noms de fonction
+      "settings": {
+        "foreground": "#A779E9",  // Premier violet clair pour les noms de fonction
+        "fontStyle": "bold"       // Optionnel : gras pour le style
+      }
+    },
+    {
+      "scope": "meta.function-call",    // Appels de fonction
+      "settings": {
+        "foreground": "#C6A9F5",  // Deuxième violet clair pour les appels de fonction
+        "fontStyle": "italic"     // Optionnel : italique pour les appels de fonction
+      }
+    },
+    {
+      "scope": "variable.other.constant",  // Constantes (e.g., const)
+      "settings": {
+        "foreground": "#D08FFF",  // Violet clair pour les constantes
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "meta.tag",  // Balises HTML
+      "settings": {
+        "foreground": "#BF93F9",  // Violet pastel pour les balises HTML
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "meta.object-literal.key",  // Noms de propriétés dans des objets
+      "settings": {
+        "foreground": "#A492ED",  // Violet légèrement grisâtre pour les propriétés
+        "fontStyle": "italic"     // Optionnel : italique pour les noms de propriété
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean.false",  // Pour la valeur 'false'
+        "constant.language.undefined"      // Pour la valeur 'undefined'
+      ],
+      "settings": {
+        "foreground": "#ADD8E6",  // Bleu clair pour 'false' et 'undefined'
+        "fontStyle": "bold"       // Optionnel : gras pour plus de visibilité
+      }
+    },
+    {
+      "scope": [
+        "entity.name.tag.template", // Balise <template>
+        "entity.name.tag.script"    // Balise <script>
+      ],
+      "settings": {
+        "foreground": "#ADD8E6",  // Bleu clair pour les balises <template> et <script>
+        "fontStyle": "bold"       // Optionnel : gras pour bien les démarquer
+      }
+    }
+  ]
+}
