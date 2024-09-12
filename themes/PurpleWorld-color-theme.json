@@ -3,17 +3,17 @@
   "type": "dark",
   "colors": {
     "editor.background": "#1C1C1C",            // Fond de l'éditeur
-    "editor.foreground": "#D4D4D4",            // Texte principal
+    // "editor.foreground": "#D4D4D4",
     "titleBar.inactiveBackground": "#5E2A84",
     "editorCursor.foreground": "#B39DDB",      // Couleur du curseur
     "editor.lineHighlightBackground": "#311B92", // Ligne en surbrillance
     "editor.selectionBackground": "#5E35B1",   // Sélection de texte
     "editor.findMatchBackground": "#7E57C2",   // Correspondance de recherche
-    "editor.findMatchHighlightBackground": "rgba(244, 143, 177, 0.5)", // Surlignage des correspondances
+    "editor.findMatchHighlightBackground": "rgba(206, 143, 247, 1)", // Surlignage des correspondances
     "activityBar.background": "#5E35B1",       // Barre d'activité
-    "sideBar.background": "#4B0082",    // Violet foncé pour l'arrière-plan de la sidebar
     "sideBar.foreground": "#FFFFFF",    // Couleur du texte dans la sidebar (blanc pour un bon contraste)
-    "sideBar.border": "#6A0DAD",        // Optionnel : une bordure légèrement plus claire pour la sidebar
+    "sideBar.border": "#6A0DAD",
+    "sideBar.background": "#2C3E50",      // Optionnel : une bordure légèrement plus claire pour la sidebar
     "sideBarSectionHeader.background": "#5E2A84",  // Optionnel : une nuance plus claire pour les headers
     "sideBarSectionHeader.foreground": "#FFFFFF",
     "statusBar.background": "#7E57C2",         // Barre de statut
@@ -21,69 +21,85 @@
     "terminal.foreground": "#D4D4D4",          // Texte du terminal
     "button.background": "#7E57C2",            // Boutons
     "badge.background": "#80DEEA",             // Badge d'alerte
-    "titleBar.activeForeground": "#D4D4D4"     // Texte de la barre de titre
+    "titleBar.activeForeground": "#D4D4D4",
+    "editorLineNumber.foreground": "#7E57C2", // Couleur des numéros de ligne en vert émeraude
+    "editorLineNumber.activeForeground": "#3C9D51",     // Texte de la barre de titre,
+    "editorSuggestWidget.background": "#2C3E50",  // Un fond bleu-gris foncé
+    "editorSuggestWidget.border": "#6A0DAD",      // Bordure verte pour rappeler Zoro
+    "editorSuggestWidget.foreground": "#c0c0c0",  // Texte argenté
+    "editorSuggestWidget.selectedBackground": "#7ec850",  // Fond vert clair pour l'élément sélectionné
+    "editorSuggestWidget.highlightForeground": "#7E57C2"
   },
   "tokenColors": [
     {
       "scope": "comment",
       "settings": {
-        "foreground": "#B39DDB",                // Couleur des commentaires
+        "foreground": "#A13333",                // Couleur des commentaires
         "fontStyle": "italic"
       }
     },
     {
-      "scope": "string",
+      "scope": "string.quoted",
       "settings": {
         "foreground": "#F48FB1"                 // Couleur des chaînes de caractères
       }
     },
     {
-      "scope": "keyword",
+      "scope": [
+        "keyword",
+        "meta.return.type.ts",
+        "support.type",
+        "entity.name.type",
+      ],
       "settings": {
         "foreground": "#7E57C2",                // Couleur des mots-clés
         "fontStyle": "bold"
       }
     },
     {
-      "scope": "variable",
+      "scope": [
+        "variable",
+        "variable.other.object",
+        "meta.map.value.yaml",
+        "support.constant.property-value.css",
+        "keyword.other.unit"
+      ],
       "settings": {
-        "foreground": "#3CB371"                 // Couleur des variables
+        "foreground": "#3C9D51"                 // Couleur des variables
       }
     },
     {
-      "scope": "function",
+      "scope": [
+        "function",
+        "meta.map.key.yaml"
+      ],
       "settings": {
         "foreground": "#7E57C2"                 // Couleur des fonctions
       }
     },
     {
-      "scope": "number",
+      "scope": [
+        "number",
+        "support.class",
+        "meta.function-call",
+        "storage.type",
+        "meta.type.parameters",
+        "storage.modifier",
+        "constant.numeric",
+        "meta.type.parameters.ts",
+        "variable.parameter",
+        "meta.selector.css",
+        "punctuation.definition.block.sequence.item.yaml"
+      ],
       "settings": {
-        "foreground": "#F48FB1"                 // Couleur des nombres
-      }
-    },
-    {
-      "scope": "type",
-      "settings": {
-        "foreground": "#D4D4D4"                 // Couleur des types
+        "foreground": "#8f2c2c"                 // Couleur des nombres
       }
     },
     {
       "scope": "variable.language.this",
       "settings": {
-        "foreground": "#FF5733",  // Couleur que tu veux pour 'this' (ici un orange vif)
+        "foreground": "#c13c1e",  // Couleur que tu veux pour 'this' (ici un orange vif)
         "fontStyle": "bold"       // Style optionnel, par exemple gras
-      }
-    },
-    {
-      "scope": [
-        "support.class",
-        "support.type",
-        "entity.name.type"        // Types comme 'Map', 'Set', etc.
-      ],
-      "settings": {
-        "foreground": "#9A7DFF",  // Couleur pour les types (ici un vert vif)
-        "fontStyle": "italic"     // Style optionnel (italique)
       }
     },
     {
@@ -91,13 +107,6 @@
       "settings": {
         "foreground": "#A779E9",  // Premier violet clair pour les noms de fonction
         "fontStyle": "bold"       // Optionnel : gras pour le style
-      }
-    },
-    {
-      "scope": "meta.function-call",    // Appels de fonction
-      "settings": {
-        "foreground": "#C6A9F5",  // Deuxième violet clair pour les appels de fonction
-        "fontStyle": "italic"     // Optionnel : italique pour les appels de fonction
       }
     },
     {
@@ -115,31 +124,40 @@
       }
     },
     {
-      "scope": "meta.object-literal.key",  // Noms de propriétés dans des objets
-      "settings": {
-        "foreground": "#A492ED",  // Violet légèrement grisâtre pour les propriétés
-        "fontStyle": "italic"     // Optionnel : italique pour les noms de propriété
-      }
-    },
-    {
       "scope": [
-        "constant.language.boolean.false",  // Pour la valeur 'false'
+        "constant.language.boolean",  // Pour la valeur 'false'
         "constant.language.undefined"      // Pour la valeur 'undefined'
       ],
       "settings": {
         "foreground": "#ADD8E6",  // Bleu clair pour 'false' et 'undefined'
-        "fontStyle": "bold"       // Optionnel : gras pour plus de visibilité
+        "fontStyle": "bold"      // Optionnel : gras pour plus de visibilité
       }
     },
     {
       "scope": [
         "entity.name.tag.template", // Balise <template>
-        "entity.name.tag.script"    // Balise <script>
+        "entity.name.tag.script",
+        "entity.name.tag.style",
+        "constant.other.color"
       ],
       "settings": {
         "foreground": "#ADD8E6",  // Bleu clair pour les balises <template> et <script>
         "fontStyle": "bold"       // Optionnel : gras pour bien les démarquer
       }
-    }
-  ]
+    },
+    // {
+    //   "scope": [
+    //       "keyword.control",
+    //       "keyword.other",
+    //       "storage.type",
+    //       "storage.modifier",
+    //       "constant.numeric",
+    //       "punctuation.definition.block.sequence.item.yaml"
+    //   ],
+    //   "settings": {
+    //       "foreground": "#F0E68C",
+    //       "fontStyle": "bold"
+    //   }
+    // }
+  ],
 }
