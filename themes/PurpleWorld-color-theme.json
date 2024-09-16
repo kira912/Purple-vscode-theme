@@ -9,7 +9,7 @@
     "editor.lineHighlightBackground": "#311B92", // Ligne en surbrillance
     "editor.selectionBackground": "#5E35B1",   // Sélection de texte
     "editor.findMatchBackground": "#7E57C2",   // Correspondance de recherche
-    "editor.findMatchHighlightBackground": "rgba(206, 143, 247, 1)", // Surlignage des correspondances
+    "editor.findMatchHighlightBackground": "rgba(206, 143, 247, 0.1)", // Surlignage des correspondances
     "activityBar.background": "#5E35B1",       // Barre d'activité
     "sideBar.foreground": "#FFFFFF",    // Couleur du texte dans la sidebar (blanc pour un bon contraste)
     "sideBar.border": "#6A0DAD",
@@ -39,17 +39,15 @@
       }
     },
     {
-      "scope": "string.quoted",
-      "settings": {
-        "foreground": "#F48FB1"                 // Couleur des chaînes de caractères
-      }
-    },
-    {
       "scope": [
         "keyword",
         "meta.return.type.ts",
         "support.type",
         "entity.name.type",
+        "function",
+        "meta.map.key.yaml",
+        "meta.object-literal.key",
+        "variable.other.object"
       ],
       "settings": {
         "foreground": "#7E57C2",                // Couleur des mots-clés
@@ -58,23 +56,16 @@
     },
     {
       "scope": [
-        "variable",
-        "variable.other.object",
+        // "variable",
+        "meta.method.declaration",
+        "variable.other.readwrite",
+        "variable.other.property",
         "meta.map.value.yaml",
         "support.constant.property-value.css",
         "keyword.other.unit"
       ],
       "settings": {
         "foreground": "#3C9D51"                 // Couleur des variables
-      }
-    },
-    {
-      "scope": [
-        "function",
-        "meta.map.key.yaml"
-      ],
-      "settings": {
-        "foreground": "#7E57C2"                 // Couleur des fonctions
       }
     },
     {
@@ -89,6 +80,8 @@
         "meta.type.parameters.ts",
         "variable.parameter",
         "meta.selector.css",
+        "string.template",
+        "string.quoted",
         "punctuation.definition.block.sequence.item.yaml"
       ],
       "settings": {
@@ -145,19 +138,14 @@
         "fontStyle": "bold"       // Optionnel : gras pour bien les démarquer
       }
     },
-    // {
-    //   "scope": [
-    //       "keyword.control",
-    //       "keyword.other",
-    //       "storage.type",
-    //       "storage.modifier",
-    //       "constant.numeric",
-    //       "punctuation.definition.block.sequence.item.yaml"
-    //   ],
-    //   "settings": {
-    //       "foreground": "#F0E68C",
-    //       "fontStyle": "bold"
-    //   }
-    // }
+    {
+      "scope": [
+          "entity.other.attribute-name.html",
+      ],
+      "settings": {
+          "foreground": "#F0E68C",
+          "fontStyle": "bold"
+      }
+    }
   ],
 }

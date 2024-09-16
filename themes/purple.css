@@ -31,11 +31,20 @@
 
 /* File Explorer Selected Item */
 .monaco-list-row.selected {
-    background-image: linear-gradient(135deg, #7ec850, #1c1c1c) !important;
+    background-image: linear-gradient(135deg, #0e7a2b, #3b5364) !important;
     opacity: 1 !important;
     border-radius: 50px;
     border-top: 1px #727b90 solid;
     border-bottom: 1px #727b90 solid;
+}
+
+.monaco-editor .margin .line-numbers {
+    font-weight: bold !important;
+}
+
+/* Sélectionner le numéro de la ligne active */
+.monaco-editor .margin .current-line {
+    font-weight: bold !important;
 }
 
 /* List item label name */
@@ -80,15 +89,30 @@
 }
 
 .monaco-workbench .part.editor>.content .editor-group-container .tabs-container .tab.active {
-    background-image: linear-gradient(135deg, #7ec850, #1c1c1c) !important;
+    background-image: linear-gradient(135deg, #0e7a2b, #3b5364) !important;
     border-radius: 10px !important;
     border-bottom-right-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
 }
 
+.monaco-breadcrumbs .monaco-breadcrumb-item {
+    border-radius: 50px;
+    background-image: linear-gradient(135deg, #0e7a2b, #3b5364) !important;
+}
+
+.monaco-workbench>.notifications-toasts .notifications-list-container {
+    background-image: linear-gradient(135deg, #4B0082, #8A2BE2) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.breadcrumbs-below-tabs {
+    padding-top: 10px;
+}
+
 .monaco-list.list_id_3:not(.drop-target):not(.dragging) .monaco-list-row:hover:not(.selected):not(.focused) {
     border-radius: 50px;
-    background-image: linear-gradient(135deg, #0b6623, #2C3E50);
+    background-image: linear-gradient(135deg, #0e7a2b, #3b5364);
 }
 
 /* Sidebar title */
@@ -123,7 +147,7 @@
 }
 
 .badge-content {
-    background-image: linear-gradient(135deg, #7ec850, #1c1c1c) !important;
+    background-image: linear-gradient(135deg, #0e7a2b, #3b5364) !important;
 }
 
 .codicon-toolbar-more,
@@ -195,6 +219,32 @@
     background-image: linear-gradient(135deg, #4B0082, #8A2BE2) !important;
     backdrop-filter: blur(3px) !important;
     border-radius: 20px !important;
+}
+
+.quick-input-widget::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(135deg, #0b6623, #2c3e50, #8e44ad, #3498db);
+    border-radius: 12px;
+    /* Correspond à la bordure du conteneur */
+    z-index: -1;
+    filter: blur(8px);
+    /* Donne l'effet doux aux bordures */
+    animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 400% 0;
+    }
 }
 
 /* Remove background for lists */

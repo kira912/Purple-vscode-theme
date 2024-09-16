@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create an DOM observer to 'listen' for changes in element's attribute.
             const observer = new MutationObserver((mutations) => {
                 mutations.forEach((mutation) => {
-                    mutatio
                     if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
                         if (commandDialog.style.display === 'none') {
                             handleEscape();
