@@ -85,7 +85,7 @@
         "punctuation.definition.block.sequence.item.yaml"
       ],
       "settings": {
-        "foreground": "#8f2c2c"                 // Couleur des nombres
+        "foreground": "#A3D8F4"                 // Couleur des nombres
       }
     },
     {
